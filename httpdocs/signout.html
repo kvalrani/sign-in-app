@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Welcome to Selesti!</title>
+  </head>
+  <body ng-app="App" ng-controller="signIn" class="ng-scope" style="overflow: hidden; height: 100%; font-size: 48.85%;">
+
+        <div id="fullpage" full-page="" class="fullpage-wrapper" style="height: 100%; position: relative; top: -200px;">
+            <div class="section first fp-section fp-table" style="padding: 3em 0px 10px; height: 403px;"><div class="fp-tableCell" style="height: 375px;">
+    
+            </div></div>
+            <div class="section fp-section fp-table active" style="padding: 3em 0px 10px; height: 403px;"><div class="fp-tableCell" style="height: 375px;">
+                <div class="signin">
+                    <h1>Thank you for coming!</h1>
+                    <h2>Who would you like to sign out?</h2>
+                    <form id="signin-form" class="signin-form ng-pristine ng-invalid ng-invalid-required" role="form" action="index.php">
+                        
+                        <div class="form-group element">
+                            <input type="text" class="form-control field ng-pristine ng-untouched ng-valid" placeholder="Your Company or Organisation...">
+                        </div>
+                        <div class="form-group element">
+                            <button type="button" id="generateChecks" class="bttn bttn-default" onclick="createCheckboxes()">Generate Checkboxes</button>
+                        </div>
+                        <div class="form-group element" id="container" />
+                        <div class="element" id="submitcontainer">
+                            <input type="submit" value="Sign Out" id="checkout_button" class="bttn bttn-default formbutton">
+                        </div>
+                    </form>
+                </div>
+            </div></div>
+        </div>
+
+
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/jquery.easings.min.js"></script>
+        <script src="js/vendor/jquery.slimscroll.min.js"></script>
+        <script src="js/vendor/jquery.fullPage.min.js"></script>
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/moment.min.js"></script>
+        <script src="js/vendor/angular-moment.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/0.7.0/jquery.velocity.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/0.7.0/velocity.ui.min.js"></script>
+        <script src="js/vendor/angucomplete.js"></script>
+        <script src="js/vendor/owl.carousel.js"></script>
+        <script src="js/vendor/jquery.blockUI.js"></script>
+
+        <script src="main.js"></script>
+    
+</body>
+</html>

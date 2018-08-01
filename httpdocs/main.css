@@ -1,0 +1,441 @@
+@import url('/css/mission-script.css');
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+body {
+  background-color: #00adef;
+  background-image: url('/img/bg.png');
+  font-family: 'Lora', serif;
+}
+.first {
+  background: none;
+}
+.mainlogo {
+  margin-top: 10px !important;
+  height: 160px !important;
+  display: block !important;
+  margin: auto !important;
+}
+#entertain {
+  height: 104px;
+  width: 104px;
+  position: fixed;
+  top: 50%;
+  margin-top: -52px;
+  z-index: 999;
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#entertain a {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  height: auto;
+  width: 200px;
+  text-align: center;
+  padding: 8px 16px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+input {
+  text-align: center;
+}
+.startpage {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.startpage h1 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 200px;
+  font-family: 'Mission';
+  color: white;
+}
+.startpage * {
+  display: block;
+  margin: auto;
+}
+.startpage .bttn {
+  background-color: #252525 !important;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: block;
+  margin: auto;
+}
+.startpage .bttn :hover {
+  background-color: white !important;
+  color: black;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: block;
+  margin: auto;
+}
+.signin {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.signin * {
+  display: block;
+  margin: auto;
+}
+.signin .secondlogo {
+  margin-top: 20px !important;
+  margin-bottom: 50px;
+}
+.signin .element {
+  padding-top: 20px;
+}
+.signin h1 {
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+.signin h2 {
+  color: white;
+  text-align: center;
+  padding-top: 0;
+  font-size: 20px;
+}
+.signin .field {
+  width: 100%;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 21px;
+  height: 45px;
+}
+.signin-form {
+  max-width: 550px;
+}
+.bttn {
+  background-color: #252525 !important;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: block;
+  margin: auto;
+  font-size: 15px;
+  cursor:pointer;
+}
+.addguestbttn {
+
+
+background-color: Transparent;
+color: white;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    text-decoration: underline;
+  display: inline-block;
+
+  display: block;
+  margin: auto;
+  font-size: 15px;
+}
+.bttn:hover {
+  background-color: white !important;
+  color: black;
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  display: inline-block;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: block;
+  margin: auto;
+}
+.confirm h1 {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+.confirm h1 span {
+  font-family: 'Mission';
+  font-size: 200px;
+}
+.confirm .glyphicon-ok {
+  color: #2ecc71;
+}
+.confirm .row {
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  overflow-y: scroll;
+  height: 364px;
+  margin-bottom: 20px;
+}
+.confirm img {
+  padding-bottom: 20px;
+}
+.confirm .last {
+  padding-bottom: 10px;
+}
+.fp-controlArrow {
+  display: none !important;
+}
+.entertain_window {
+  background-color: #00B0EB;
+  background-attachment: fixed;
+  width: 70%;
+  height: 70%;
+  border-radius: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+}
+.entertain_window .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 1;
+  z-index: 100;
+}
+.entertain_window .close .font {
+  color: white !important;
+}
+.entertain_window .entel {
+  height: auto !important;
+  padding: 20px;
+  padding-top: 40px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  -webkit-transform: translateY(-30%) translateX(-50%);
+  -ms-transform: translateY(-30%) translateX(-50%);
+  transform: translateY(-30%) translateX(-50%);
+  left: 50%;
+}
+.entertain_window .entertain1 p {
+  padding-bottom: 20px;
+}
+.entertain_window .bottom {
+  position: absolute;
+  bottom: 0;
+}
+.entertain_window .bottom .prev {
+  float: left;
+}
+.entertain_window .bottom .next {
+  float: right;
+}
+#owl-demo .item img {
+  padding-top: 50px;
+  max-width: 95%;
+  width: auto;
+  height: auto;
+  max-height: 95%;
+}
+#owl-demo .item p {
+  padding-top: 30px;
+  font-size: 30px;
+  display: block;
+  width: 50%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  overflow: scroll;
+}
+#owl-demo .item {
+  padding-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+#signin-form .blockMsg {
+  border: none !important;
+  font-family: 'Mission';
+  font-size: 72px;
+  color: white !important;
+  width: 100% !important;
+  height: 100% !important;
+  text-align: center !important;
+  top: 0 !important;
+  left: 0 !important;
+  background: #00adef !important;
+  line-height: 200%;
+  border-radius: 20px;
+}
+#signin-form .blockOverlay {
+  background: transparent !important;
+}
+.owl-controls {
+  /*padding-top: 10px !important;*/
+}
+#carousel {
+  height: 100%;
+  overflow: scroll;
+}
+.signedin.last {
+  line-height: 0;
+  margin-bottom: 50px;
+}
+.newperson,
+.newperson:hover {
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  text-decoration: none;
+}
+.owl-controls {
+  display: none !important;
+}
+.hint img {
+  position: fixed;
+  display: block;
+  left: 50%;
+  bottom: 20px;
+  margin-left: -117.5px;
+}
+.text {
+  vertical-align: middle;
+}
+.item p {
+  color: white;
+  margin-top: 30px !important;
+  width: 90% !important;
+}
+/* ----------- Animations ------------ */
+@-webkit-keyframes wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-12px);
+    transform: translateX(-12px);
+  }
+  49.95% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+  }
+  83.25% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.wobble-horizontal {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.wobble-horizontal:hover,
+.wobble-horizontal:focus,
+.wobble-horizontal:active {
+  -webkit-animation-name: wobble-horizontal;
+  animation-name: wobble-horizontal;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+/* -------------------------------------------- */
+/* ---------------NEW ANIMATION---------------- */
+/* Buzz Out */
+@-webkit-keyframes buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+.buzz-out {
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.buzz-out:hover,
+.buzz-out:focus,
+.buzz-out:active {
+  -webkit-animation-name: buzz-out;
+  animation-name: buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
