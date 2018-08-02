@@ -41,7 +41,7 @@
         <script src="js/vendor/owl.carousel.js"></script>
         <script src="js/vendor/jquery.blockUI.js"></script>
 
-        <script src="js/main.js"></script>
+        <script src="main.js"></script>
     
 </body>
 </html>
