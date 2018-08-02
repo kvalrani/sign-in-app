@@ -1,47 +1,40 @@
 <?php
-$servername = "localhost";
-$username = "admin";
-$password = "password";
-$dbname = "sign-in-app";
-
+require "../vendor/autoload.php";
+use Illuminate\Database\Capsule\Manager as DB;
+$req = \Illuminate\Http\Request::createFromGlobals();
+$dotenv = new Dotenv\Dotenv(__DIR__.'/../');
+$dotenv->load();
+ $servername = getenv('SERVERNAME');
+ $username = getenv('USERNAME');
+ $password = getenv('PASSWORD');
+ $dbname = getenv('DBNAME');
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+$db = new DB;
 
-$inputname = $_POST['fieldname'];
-$company = $_POST['company'];
+$db->addConnection([
+	'database'=>$dbname,
+	'username'=>$username,
+	'password'=>$password,
+	'driver'=>'mysql',
+	'host'=>$servername,
+]);
+
+$db -> setAsGlobal();
+
+
+$inputname = $req->fieldname;
+$company = $req->company;
+DB::table('visitors')->insert(['company'=>$company, 'status'=>'1', 'name'=>$inputname, 'signintimestamp'=>date('Y-m-d H:i:s')]);
+
 header("location: index.php");
-$sql = "INSERT INTO visitors (name, company, status, signintimestamp)
-VALUES ('$inputname', '$company', '1', NOW())";
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
 
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+$array = array_wrap(explode(', ', $req->guestsfield));
 
-$array = explode(',', $_POST['guestsfield']);
-$id=mysqli_insert_id($conn);//get your project id here
-$guests="";    
-foreach($array as $guestsfield)
-{
-       //modify below to add $id along with $tag_name
-   $guests.="('{$id}','{$guestsfield}'),"; // you need to remove last comma else it will throw mysql error  
-}
+	foreach($array as $guestsfield)
+	{
+		DB::table('visitors')->insert(['company'=>$company, 'status'=>'1', 'name'=>$guestsfield, 'signintimestamp'=>date('Y-m-d H:i:s')]);
+	}
 
-if($guests!="")
-{
-    //rtrim to remove last ',' from string. 
-  $sql=rtrim($sql,',');
-
-$sql = "INSERT INTO visitors (name, company, status, signintimestamp)
-VALUES ('$guests', '$company', '1', NOW())";
-}
-
-$conn->close();
 ?>
 
 
