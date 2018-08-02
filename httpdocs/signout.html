@@ -21,11 +21,14 @@
                 <div class="signin">
                     <h1>Thank you for coming!</h1>
                     <h2>Who would you like to sign out?</h2>
-                    <form id="signin-form" class="signin-form ng-pristine ng-invalid ng-invalid-required" role="form" action="index.php">
-                        <div class="form-group element">
-                            <button type="button" id="generateChecks" class="bttn bttn-default" onclick="createCheckboxes()">Generate Checkboxes</button>
-                        </div>
-                        <div class="form-group element" id="container" />
+                    <form id="signin-form" class="signin-form ng-pristine ng-invalid ng-invalid-required" role="form" action="api/signout" method="post">
+                        <div class="form-group element" id="app" />
+                        <guests inline-template>
+                            <div>
+                                <div v-for="guest in guests"><input type="checkbox" style="padding-top:30px;":value='guest.id' ><h3 style="color:white;">{{guest.name}} - {{guest.company}}</h3></input</div>
+                            </div>
+                        </guests>
+
                         <div class="element" id="submitcontainer">
                             <input type="submit" value="Sign Out" id="checkout_button" class="bttn bttn-default formbutton">
                         </div>
@@ -34,22 +37,45 @@
             </div></div>
         </div>
 
-
-        <script src="js/vendor/jquery-1.11.0.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/jquery.easings.min.js"></script>
-        <script src="js/vendor/jquery.slimscroll.min.js"></script>
-        <script src="js/vendor/jquery.fullPage.min.js"></script>
-        <script src="js/vendor/angular.min.js"></script>
-        <script src="js/vendor/moment.min.js"></script>
-        <script src="js/vendor/angular-moment.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/0.7.0/jquery.velocity.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/0.7.0/velocity.ui.min.js"></script>
-        <script src="js/vendor/angucomplete.js"></script>
-        <script src="js/vendor/owl.carousel.js"></script>
-        <script src="js/vendor/jquery.blockUI.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+        <!--<script src="js/vendor/jquery-1.11.0.min.js"></script>-->
+        <!--<script src="js/vendor/bootstrap.min.js"></script>-->
+        <!--<script src="js/vendor/jquery.easings.min.js"></script>-->
+        <!--<script src="js/vendor/jquery.slimscroll.min.js"></script>-->
+        <!--<script src="js/vendor/jquery.fullPage.min.js"></script>-->
+        <!--<script src="js/vendor/angular.min.js"></script>-->
+        <!--<script src="js/vendor/moment.min.js"></script>-->
+        <!--<script src="js/vendor/angular-moment.min.js"></script>-->
+        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/velocity/0.7.0/jquery.velocity.min.js"></script>-->
+        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/velocity/0.7.0/velocity.ui.min.js"></script>-->
+        <!--<script src="js/vendor/angucomplete.js"></script>-->
+        <!--<script src="js/vendor/owl.carousel.js"></script>-->
+        <!--<script src="js/vendor/jquery.blockUI.js"></script>-->
         <script src="main.js"></script>
-    
+        <script>
+
+            Vue.component('guests', {
+                mounted()
+                {
+                    axios.get('api/users').then(response=>{
+                        this.guests=response.data;
+                    })
+                },
+                data()
+                {
+                    return {guests:[]};
+                }
+            });
+
+            new Vue({
+                el: '#app'
+            });
+
+
+
+
+
+        </script>
 </body>
 </html>
