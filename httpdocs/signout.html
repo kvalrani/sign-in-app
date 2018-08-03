@@ -25,12 +25,12 @@
                         <div class="form-group element" id="app" />
                         <guests inline-template>
                             <div>
-                                <div v-for="guest in guests"><input type="checkbox" style="padding-top:30px;":value='guest.id' name="guests[]"><h3 style="color:white;">{{guest.name}} - {{guest.company}}</h3></input</div>
+                                <div v-for="guest in guests"><input type="checkbox" style="margin-top:30px;":value='guest.id' name="guests[]"><h3 style="color:white;  line-height: 0px;" >{{guest.name}} - {{guest.company}}</h3></input</div>
                             </div>
                         </guests>
 
                         <div class="element" id="submitcontainer">
-                            <input type="submit" value="Sign Out" id="checkout_button" class="bttn bttn-default formbutton">
+                            <input type="submit" value="Sign Out" id="checkout_button" class="bttn bttn-default formbutton" style="margin-top:30px;">
                         </div>
                     </form>
                 </div>
