@@ -15,12 +15,11 @@ class SignOutUserController
     {
         $this->request = \Illuminate\Http\Request::createFromGlobals();
 
-
     }
 
     public function signout()
     {
-        $signout = new SignOut();
+        $signout = new SignOut($this->request->guests);
         return redirect('/');
     }
 }

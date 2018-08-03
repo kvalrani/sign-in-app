@@ -13,11 +13,11 @@ class SignOut
 {
 
 
-    public function __construct()
+    public function __construct($guests)
     {
         $this->database = new Database();
 
-        DB::table('visitors')->update(['status'=>'0', 'signouttimestamp'=>date('Y-m-d H:i:s')]);
+        DB::table('visitors')->whereIn('id', $guests)->update(['status'=>'0', 'signouttimestamp'=>date('Y-m-d H:i:s')]);
 
     }
 
